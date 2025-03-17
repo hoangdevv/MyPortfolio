@@ -1,0 +1,265 @@
+/* Project Detail Page Styles */
+
+/* Project Header */
+.project-header {
+    background-color: var(--dark-color);
+    background-image: linear-gradient(135deg, var(--dark-color) 0%, var(--dark-accent) 100%);
+    color: var(--light-color);
+    padding: 120px 0 60px;
+    text-align: center;
+}
+
+.back-link {
+    color: var(--primary-light);
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 20px;
+    transition: var(--transition);
+}
+
+.back-link:hover {
+    color: var(--primary-color);
+    transform: translateX(-5px);
+}
+
+.project-header .project-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.project-meta {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.meta-item i {
+    margin-right: 8px;
+    color: var(--primary-light);
+}
+
+.project-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Project Content Section */
+.project-content-section {
+    padding: 80px 0;
+    background-color: var(--light-color);
+}
+
+.section-heading {
+    color: var(--dark-color);
+    font-size: 2rem;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-heading:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+/* Project Overview */
+.project-overview p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-dark);
+    margin-bottom: 25px;
+}
+
+.tech-stack {
+    margin-top: 30px;
+}
+
+.tech-stack h5 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tech-tag {
+    background-color: rgba(76, 175, 80, 0.1);
+    color: var(--primary-color);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Project Features */
+.features-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.feature-icon {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(76, 175, 80, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.feature-icon i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.feature-content {
+    flex: 1;
+}
+
+.feature-content h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Implementation Details */
+.implementation-section {
+    margin-bottom: 40px;
+}
+
+.implementation-section h4 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+
+.implementation-section p {
+    margin-bottom: 20px;
+}
+
+.implementation-section pre {
+    background-color: var(--dark-color);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    overflow-x: auto;
+}
+
+.implementation-section code {
+    color: var(--text-light);
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Challenges */
+.challenge-item {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.challenge-item h4 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+
+.challenge-item p {
+    margin-bottom: 10px;
+}
+
+.challenge-item p strong {
+    color: var(--primary-dark);
+}
+
+/* Conclusion */
+.project-conclusion p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* Next Project */
+.next-project {
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 1px solid #eee;
+}
+
+/* Responsive */
+@media (max-width: 991.98px) {
+    .project-header .project-title {
+        font-size: 2rem;
+    }
+    
+    .features-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .project-header {
+        padding: 100px 0 40px;
+    }
+    
+    .project-meta {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .project-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .project-links .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .section-heading {
+        font-size: 1.8rem;
+    }
+    
+    .feature-item {
+        flex-direction: column;
+    }
+    
+    .feature-icon {
+        margin-bottom: 15px;
+    }
+    
+    .next-project a {
+        display: block;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+} 

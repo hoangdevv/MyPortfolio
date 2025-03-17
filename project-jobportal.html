@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Tuyển dụng và tìm kiếm việc làm - Hoàng Dev</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/project-detail.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-scrolled" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Hoàng Dev</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html#trang-chu">Trang Chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#gioi-thieu">Giới Thiệu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#ky-nang">Kỹ Năng</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="index.html#du-an">Dự Án</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#kinh-nghiem">Kinh Nghiệm</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#lien-he">Liên Hệ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Header -->
+    <header class="project-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto text-center">
+                    <a href="index.html#du-an" class="back-link"><i class="fas fa-arrow-left"></i> Quay lại dự án</a>
+                    <h1 class="project-title">Website Tuyển dụng và tìm kiếm việc làm</h1>
+                    <div class="project-meta">
+                        <span class="meta-item"><i class="far fa-calendar-alt"></i> 09/2024 - 12/2024</span>
+                        <span class="meta-item"><i class="fas fa-user-graduate"></i> Đồ án chuyên ngành (HUTECH)</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/hoangdevv/DACN-4NTH-WebsiteTimKiemViecLam" target="_blank" class="btn btn-outline-light">
+                            <i class="fab fa-github"></i> Mã nguồn
+                        </a>
+                        <a href="https://workfinder-exquisite-llama-47b911.netlify.app" target="_blank" class="btn btn-primary">
+                            <i class="fas fa-external-link-alt"></i> Xem Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Project Overview -->
+    <section class="project-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="project-overview" data-aos="fade-up">
+                        <h2 class="section-heading">Tổng quan dự án</h2>
+                        <p>Website Tuyển dụng và tìm kiếm việc làm là một nền tảng kết nối nhà tuyển dụng và người tìm việc, giúp quá trình tuyển dụng trở nên hiệu quả và thuận tiện hơn. Dự án được phát triển như một đồ án chuyên ngành tại Trường Đại học Công nghệ TP.HCM (HUTECH).</p>
+                        
+                        <div class="tech-stack">
+                            <h3>Công nghệ sử dụng</h3>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Spring Boot</span>
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">RESTful API</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">WebSocket/STOMP</span>
+                                <span class="tech-tag">JWT</span>
+                                <span class="tech-tag">OAuth2</span>
+                                <span class="tech-tag">Cloudinary</span>
+                                <span class="tech-tag">Docker</span>
+                                <span class="tech-tag">Render</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Features -->
+                    <div class="project-features mt-5" data-aos="fade-up">
+                        <h2 class="section-heading">Tính năng chính</h2>
+                        <div class="features-list">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-user-plus"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Đăng ký và xác thực</h4>
+                                    <p>Hệ thống xác thực và phân quyền với Spring Security, JWT và OAuth2. Hỗ trợ đăng nhập bằng tài khoản Google.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Tìm kiếm việc làm</h4>
+                                    <p>Tìm kiếm việc làm với nhiều bộ lọc như vị trí, địa điểm, mức lương, loại công việc và kỹ năng.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-file-alt"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Quản lý hồ sơ</h4>
+                                    <p>Người tìm việc có thể tạo và quản lý hồ sơ cá nhân, tải lên CV và theo dõi trạng thái ứng tuyển.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-bullhorn"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Đăng tin tuyển dụng</h4>
+                                    <p>Nhà tuyển dụng có thể đăng tin tuyển dụng, quản lý ứng viên và đánh giá hồ sơ.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-comments"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Chat thời gian thực</h4>
+                                    <p>Hệ thống chat thời gian thực giữa nhà tuyển dụng và ứng viên sử dụng WebSocket/STOMP.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Chatbot hỗ trợ</h4>
+                                    <p>Chatbot hỗ trợ người dùng trả lời các câu hỏi thường gặp và hướng dẫn sử dụng hệ thống.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-credit-card"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Thanh toán trực tuyến</h4>
+                                    <p>Tích hợp hệ thống thanh toán trực tuyến (VNPAY, PayPal) cho các gói dịch vụ tuyển dụng.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-bell"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Thông báo</h4>
+                                    <p>Hệ thống thông báo qua email và thông báo thời gian thực về trạng thái ứng tuyển và tin nhắn mới.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- My Role -->
+                    <div class="project-role mt-5" data-aos="fade-up">
+                        <h2 class="section-heading">Vai trò và trách nhiệm</h2>
+                        <ul class="role-list">
+                            <li>Thiết kế và phát triển RESTful APIs với Spring Boot</li>
+                            <li>Quản lý cơ sở dữ liệu MySQL</li>
+                            <li>Tối ưu chuyển đổi dữ liệu giữa DTO và Entity với MapStruct</li>
+                            <li>Triển khai quản lý hình ảnh trên nền tảng đám mây using Cloudinary</li>
+                            <li>Xây dựng hệ thống xác thực và phân quyền với Spring Security, JWT, OAuth2</li>
+                            <li>Tích hợp hệ thống thanh toán (VNPAY, PayPal)</li>
+                            <li>Xây dựng hệ thống chat thời gian thực với WebSocket/STOMP</li>
+                            <li>Xây dựng chatbot hỗ trợ người dùng với mô hình Rule-Based</li>
+                            <li>Triển khai dự án với Docker trên Render</li>
+                        </ul>
+                    </div>
+
+                    <!-- Screenshots -->
+                    <div class="project-screenshots mt-5" data-aos="fade-up">
+                        <h2 class="section-heading">Hình ảnh dự án</h2>
+                        <div class="screenshots-gallery">
+                            <div class="screenshot-item">
+                                <img src="assets/img/projects/job-portal-1.jpg" alt="Trang chủ Website Tuyển dụng">
+                                <div class="screenshot-caption">Trang chủ</div>
+                            </div>
+                            <div class="screenshot-item">
+                                <img src="assets/img/projects/job-portal-2.jpg" alt="Trang quản lý hồ sơ">
+                                <div class="screenshot-caption">Quản lý hồ sơ</div>
+                            </div>
+                            <div class="screenshot-item">
+                                <img src="assets/img/projects/job-portal-3.jpg" alt="Trang tìm kiếm việc làm">
+                                <div class="screenshot-caption">Tìm kiếm việc làm</div>
+                            </div>
+                            <div class="screenshot-item">
+                                <img src="assets/img/projects/job-portal-4.jpg" alt="Trang đăng tin tuyển dụng">
+                                <div class="screenshot-caption">Đăng tin tuyển dụng</div>
+                            </div>
+                            <div class="screenshot-item">
+                                <img src="assets/img/projects/job-portal-5.jpg" alt="Hệ thống chat">
+                                <div class="screenshot-caption">Hệ thống chat</div>
+                            </div>
+                            <div class="screenshot-item">
+                                <img src="assets/img/projects/job-portal-6.jpg" alt="Thanh toán trực tuyến">
+                                <div class="screenshot-caption">Thanh toán trực tuyến</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Challenges and Solutions -->
+                    <div class="project-challenges mt-5" data-aos="fade-up">
+                        <h2 class="section-heading">Thách thức và giải pháp</h2>
+                        <div class="challenge-item">
+                            <h4>Xây dựng hệ thống chat thời gian thực</h4>
+                            <p><strong>Thách thức:</strong> Tạo hệ thống chat thời gian thực với khả năng mở rộng và hiệu suất cao.</p>
+                            <p><strong>Giải pháp:</strong> Sử dụng WebSocket/STOMP để xây dựng kết nối hai chiều giữa client và server, kết hợp với Redis để lưu trữ tin nhắn tạm thời và đảm bảo tin nhắn được gửi đến ngay cả khi người dùng offline.</p>
+                        </div>
+                        
+                        <div class="challenge-item">
+                            <h4>Tối ưu hóa hiệu suất tìm kiếm</h4>
+                            <p><strong>Thách thức:</strong> Xây dựng hệ thống tìm kiếm việc làm với nhiều bộ lọc và hiệu suất cao.</p>
+                            <p><strong>Giải pháp:</strong> Sử dụng Spring Data JPA Specification để xây dựng truy vấn động, kết hợp với caching để tăng tốc độ truy vấn và phân trang kết quả.</p>
+                        </div>
+                        
+                        <div class="challenge-item">
+                            <h4>Bảo mật và xác thực</h4>
+                            <p><strong>Thách thức:</strong> Đảm bảo hệ thống an toàn với nhiều loại người dùng và quyền hạn khác nhau.</p>
+                            <p><strong>Giải pháp:</strong> Triển khai Spring Security với JWT để xác thực và phân quyền, kết hợp với OAuth2 để hỗ trợ đăng nhập bằng tài khoản Google.</p>
+                        </div>
+                    </div>
+
+                    <!-- Conclusion -->
+                    <div class="project-conclusion mt-5" data-aos="fade-up">
+                        <h2 class="section-heading">Kết luận</h2>
+                        <p>Dự án Website Tuyển dụng và tìm kiếm việc làm là một trải nghiệm học tập quý báu, giúp tôi áp dụng kiến thức lý thuyết vào thực tế và phát triển kỹ năng làm việc với các công nghệ hiện đại. Dự án không chỉ đáp ứng các yêu cầu của đồ án mà còn là một sản phẩm có thể mở rộng và phát triển trong tương lai.</p>
+                        <p>Thông qua dự án này, tôi đã học được cách thiết kế và xây dựng một hệ thống web phức tạp, từ backend đến frontend, và triển khai nó lên môi trường thực tế. Những kinh nghiệm và bài học từ dự án này sẽ là nền tảng vững chắc cho sự phát triển nghề nghiệp của tôi trong tương lai.</p>
+                    </div>
+
+                    <!-- Next Project -->
+                    <div class="next-project mt-5 text-center" data-aos="fade-up">
+                        <a href="index.html#du-an" class="btn btn-primary">
+                            <i class="fas fa-arrow-left me-2"></i> Quay lại tất cả dự án
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-lg-start">
+                    <div class="copyright">
+                        &copy; 2023 - Hoàng Dev Portfolio | Backend Developer
+                    </div>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <div class="footer-links">
+                        <a href="index.html#trang-chu">Trang Chủ</a>
+                        <a href="index.html#gioi-thieu">Giới Thiệu</a>
+                        <a href="index.html#ky-nang">Kỹ Năng</a>
+                        <a href="index.html#du-an">Dự Án</a>
+                        <a href="index.html#lien-he">Liên Hệ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html> 

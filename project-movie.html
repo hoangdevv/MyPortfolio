@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Xem Phim - Hoàng Dev</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/project-detail.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-scrolled" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Hoàng Dev</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html#trang-chu">Trang Chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#gioi-thieu">Giới Thiệu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#ky-nang">Kỹ Năng</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="index.html#du-an">Dự Án</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#kinh-nghiem">Kinh Nghiệm</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#lien-he">Liên Hệ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Header -->
+    <header class="project-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto text-center">
+                    <a href="index.html#du-an" class="back-link"><i class="fas fa-arrow-left"></i> Quay lại dự án</a>
+                    <h1 class="project-title">Website Xem Phim</h1>
+                    <div class="project-meta">
+                        <span class="meta-item"><i class="far fa-calendar-alt"></i> 06/2023 - 09/2023</span>
+                        <span class="meta-item"><i class="fas fa-user-graduate"></i> Dự án cá nhân</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/hoangdevv" target="_blank" class="btn btn-outline-light">
+                            <i class="fab fa-github"></i> Mã nguồn
+                        </a>
+                        <a href="#" target="_blank" class="btn btn-primary">
+                            <i class="fas fa-external-link-alt"></i> Xem Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Project Content -->
+    <section class="project-content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <!-- Project Overview -->
+                    <div class="project-overview" data-aos="fade-up">
+                        <h2 class="section-heading">Tổng quan dự án</h2>
+                        <p>Website Xem Phim là một nền tảng trực tuyến cho phép người dùng xem phim, trailer, tìm kiếm phim theo nhiều tiêu chí, bình luận và lưu phim yêu thích. Dự án sử dụng TMDb API để lấy dữ liệu phim và lưu trữ vào MongoDB, đồng thời tích hợp các biện pháp bảo mật để chống lại việc download phim trái phép.</p>
+                        
+                        <div class="tech-stack">
+                            <h5>Công nghệ sử dụng:</h5>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Express.js</span>
+                                <span class="tech-tag">Next.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">TMDb API</span>
+                                <span class="tech-tag">JWT</span>
+                                <span class="tech-tag">Socket.io</span>
+                                <span class="tech-tag">Cloudinary</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Features -->
+                    <div class="project-features mt-5" data-aos="fade-up">
+                        <h2 class="section-heading">Tính năng chính</h2>
+                        <div class="features-list">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-film"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Xem phim trực tuyến</h4>
+                                    <p>Hỗ trợ xem phim với nhiều chất lượng khác nhau (480p, 720p, 1080p), tự động lưu tiến độ xem và gợi ý phim liên quan.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-play-circle"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Xem trailer</h4>
+                                    <p>Tích hợp YouTube API để hiển thị trailer phim ngay trên trang web mà không cần chuyển hướng.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-comment"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Bình luận và đánh giá</h4>
+                                    <p>Người dùng có thể bình luận, đánh giá phim và tương tác với các bình luận khác theo thời gian thực.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Danh sách yêu thích</h4>
+                                    <p>Lưu trữ và quản lý danh sách phim yêu thích, phim đã xem và phim muốn xem trong tương lai.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Bảo vệ nội dung</h4>
+                                    <p>Triển khai các biện pháp chống download phim trái phép như mã hóa stream, chống F12 và chống ghi màn hình.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Tìm kiếm nâng cao</h4>
+                                    <p>Hỗ trợ tìm kiếm phim theo tên, thể loại, diễn viên, đạo diễn, năm phát hành và nhiều tiêu chí khác.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Screenshots -->
+                    <div class="project-screenshots mt-5" data-aos="fade-up">
+                        <h2 class="section-heading">Hình ảnh dự án</h2>
+                        <div class="screenshots-gallery">
+                            <div class="screenshot-item">
+                                <img src="assets/img/projects/movie-1.jpg" alt="Trang chủ Website Xem Phim">
+                            </div>
+                            <div class="screenshot-item">
+                                <img src="assets/img/projects/movie-2.jpg" alt="Trang chi tiết phim">
+                            </div>
+                            <div class="screenshot-item">
+                                <img src="assets/img/projects/movie-3.jpg" alt="Trang xem phim">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Implementation Details -->
+                    <div class="implementation-details mt-5" data-aos="fade-up">
+                        <h2 class="section-heading">Chi tiết triển khai</h2>
+                        
+                        <div class="implementation-section">
+                            <h4>Backend (Express.js)</h4>
+                            <p>Backend được xây dựng trên Express.js với kiến trúc RESTful API, sử dụng JWT để xác thực người dùng và phân quyền. Dữ liệu phim được lấy từ TMDb API và lưu trữ trong MongoDB để tối ưu hiệu suất và giảm số lượng request đến API bên ngoài.</p>
+                            <pre><code>// Ví dụ code lấy dữ liệu phim từ TMDb API
+const fetchMovieData = async (movieId) => {
+  try {
+    const response = await axios.get(
+      `https://api.themoviedb.org/3/movie/${movieId}?api_key=${process.env.TMDB_API_KEY}&language=vi`
+    );
+    
+    // Lưu vào database để cache
+    await Movie.findOneAndUpdate(
+      { tmdbId: movieId },
+      { 
+        ...response.data,
+        lastUpdated: new Date() 
+      },
+      { upsert: true, new: true }
+    );
+    
+    return response.data;
+  } catch (error) {
+    console.error('Error fetching movie data:', error);
+    throw error;
+  }
+};</code></pre>
+                        </div>
+                        
+                        <div class="implementation-section">
+                            <h4>Frontend (Next.js)</h4>
+                            <p>Frontend được phát triển với Next.js để tận dụng Server-Side Rendering, cải thiện SEO và tối ưu thời gian tải trang. Giao diện người dùng được thiết kế theo hướng responsive, hỗ trợ đầy đủ trên các thiết bị di động và máy tính bảng.</p>
+                            <pre><code>// Ví dụ component hiển thị danh sách phim
+export default function MovieGrid({ movies }) {
+  return (
+    <div className="movie-grid">
+      {movies.map((movie) => (
+        <Link href={`/movie/${movie.id}`} key={movie.id}>
+          <div className="movie-card">
+            <div className="movie-poster">
+              <Image 
+                src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                alt={movie.title}
+                width={300}
+                height={450}
+                layout="responsive"
+              />
+              <div className="movie-rating">
+                <span>{movie.vote_average.toFixed(1)}</span>
+              </div>
+            </div>
+            <h3 className="movie-title">{movie.title}</h3>
+            <p className="movie-year">{new Date(movie.release_date).getFullYear()}</p>
+          </div>
+        </Link>
+      ))}
+    </div>
+  );
+}</code></pre>
+                        </div>
+                        
+                        <div class="implementation-section">
+                            <h4>Bảo vệ nội dung</h4>
+                            <p>Để chống lại việc download phim trái phép, dự án triển khai nhiều lớp bảo vệ như mã hóa stream, vô hiệu hóa các phím tắt và chuột phải, chống F12 và các công cụ developer, sử dụng watermark động và chia nhỏ video thành các segment.</p>
+                            <pre><code>// Ví dụ code chống download và F12
+document.addEventListener('contextmenu', (e) => e.preventDefault());
+document.addEventListener('keydown', (e) => {
+  // Chặn F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+  if (
+    e.keyCode === 123 || 
+    (e.ctrlKey && e.shiftKey && e.keyCode === 73) ||
+    (e.ctrlKey && e.shiftKey && e.keyCode === 74) ||
+    (e.ctrlKey && e.keyCode === 85)
+  ) {
+    e.preventDefault();
+    return false;
+  }
+});</code></pre>
+                        </div>
+                    </div>
+
+                    <!-- Challenges -->
+                    <div class="project-challenges mt-5" data-aos="fade-up">
+                        <h2 class="section-heading">Thách thức và giải pháp</h2>
+                        
+                        <div class="challenge-item">
+                            <h4>Hiệu suất và tối ưu hóa</h4>
+                            <p><strong>Thách thức:</strong> Xử lý lượng lớn dữ liệu phim và người dùng đồng thời mà không làm giảm hiệu suất.</p>
+                            <p><strong>Giải pháp:</strong> Triển khai caching với Redis, lazy loading cho hình ảnh, và phân trang cho kết quả tìm kiếm. Sử dụng CDN để phân phối nội dung tĩnh và tối ưu hóa kích thước bundle với code splitting.</p>
+                        </div>
+                        
+                        <div class="challenge-item">
+                            <h4>Bảo mật và chống download</h4>
+                            <p><strong>Thách thức:</strong> Ngăn chặn việc download phim trái phép trong khi vẫn đảm bảo trải nghiệm người dùng tốt.</p>
+                            <p><strong>Giải pháp:</strong> Sử dụng HLS (HTTP Live Streaming) với mã hóa, watermark động, và kiểm soát phiên xem. Triển khai hệ thống token ngắn hạn cho mỗi segment video và giới hạn số lượng phiên đồng thời cho mỗi tài khoản.</p>
+                        </div>
+                        
+                        <div class="challenge-item">
+                            <h4>Đồng bộ hóa dữ liệu với TMDb</h4>
+                            <p><strong>Thách thức:</strong> Duy trì dữ liệu phim luôn cập nhật mà không vượt quá giới hạn API của TMDb.</p>
+                            <p><strong>Giải pháp:</strong> Triển khai hệ thống cron job để cập nhật dữ liệu theo lịch trình, ưu tiên cập nhật phim mới và phim được xem nhiều. Sử dụng webhook để nhận thông báo khi có cập nhật từ TMDb.</p>
+                        </div>
+                    </div>
+
+                    <!-- Conclusion -->
+                    <div class="project-conclusion mt-5" data-aos="fade-up">
+                        <h2 class="section-heading">Kết luận</h2>
+                        <p>Website Xem Phim là một dự án đầy thách thức nhưng cũng rất thú vị, giúp tôi nâng cao kỹ năng phát triển ứng dụng web full-stack và xử lý các vấn đề phức tạp như streaming video, bảo mật nội dung và tối ưu hiệu suất.</p>
+                        <p>Dự án này cũng giúp tôi hiểu sâu hơn về cách làm việc với các API bên ngoài, quản lý dữ liệu lớn và xây dựng hệ thống có khả năng mở rộng. Những kinh nghiệm và bài học từ dự án này sẽ là nền tảng vững chắc cho các dự án tương lai của tôi.</p>
+                    </div>
+
+                    <!-- Next Project -->
+                    <div class="next-project mt-5 text-center" data-aos="fade-up">
+                        <a href="index.html#du-an" class="btn btn-primary">
+                            <i class="fas fa-arrow-left me-2"></i> Quay lại tất cả dự án
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-lg-start">
+                    <div class="copyright">
+                        &copy; 2023 - Hoàng Dev Portfolio | Backend Developer
+                    </div>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <div class="footer-links">
+                        <a href="index.html#trang-chu">Trang Chủ</a>
+                        <a href="index.html#gioi-thieu">Giới Thiệu</a>
+                        <a href="index.html#ky-nang">Kỹ Năng</a>
+                        <a href="index.html#du-an">Dự Án</a>
+                        <a href="index.html#lien-he">Liên Hệ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html> 

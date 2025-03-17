@@ -10,8 +10,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
     <!-- Navbar -->
@@ -58,16 +64,22 @@ class BackendDeveloper {
         this.name = "Hoàng";
         this.role = "Backend Developer";
         this.skills = [
-            "Node.js", "Express", 
-            "MongoDB", "SQL", 
-            "API Design", "Docker"
+            "Java", "Node.js", 
+            "PHP", "Spring Framework",
+            "Express.js", "MongoDB", "MySQL"
         ];
+        this.passion = "Building scalable systems";
     }
 
     createSolution(problem) {
         return this.skills
             .filter(skill => skill.canSolve(problem))
             .map(skill => skill.implement());
+    }
+    
+    continuallyLearn() {
+        // Always improving...
+        return new Knowledge();
     }
 }
                             </code></pre>
@@ -76,6 +88,7 @@ class BackendDeveloper {
                 </div>
             </div>
         </div>
+        <div id="particles-js" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
     </header>
 
     <!-- About Section -->
@@ -90,47 +103,106 @@ class BackendDeveloper {
                     <div class="about-image">
                         <!-- Thay thế đường dẫn bằng ảnh thật của bạn -->
                         <img src="assets/img/profile.png" alt="Hoàng - Backend Developer" class="img-fluid rounded-3 shadow">
+                        <div class="about-shape"></div>
+                        <div class="experience-badge">
+                            <span class="exp-number">0+</span>
+                            <span class="exp-text">Năm<br>Kinh nghiệm</span>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-7" data-aos="fade-left">
                     <div class="about-content">
+                        <div class="about-greeting">Xin chào! Tôi là</div>
                         <h3>Backend Developer với niềm đam mê tạo ra các giải pháp hiệu quả</h3>
-                        <p class="lead">Với hơn X năm kinh nghiệm trong lĩnh vực phát triển phần mềm, tôi đã xây dựng nhiều ứng dụng có hiệu suất cao và khả năng mở rộng.</p>
-                        <p>Tôi là một người học hỏi liên tục, luôn cập nhật các công nghệ mới và áp dụng các phương pháp tốt nhất cho từng dự án. Niềm đam mê của tôi là tạo ra các giải pháp backend mạnh mẽ, an toàn và dễ bảo trì.</p>
+                        <p class="lead">Thực tập sinh Backend Developer đầy nhiệt huyết với nền tảng vững chắc về Java, Node.js, PHP. Luôn sẵn sàng học hỏi, nâng cao kỹ năng và đóng góp vào các dự án thực tế.</p>
+                        <p>Mong muốn làm việc trong môi trường chuyên nghiệp để phát triển bản thân và tích lũy kinh nghiệm từ các tiền bối.</p>
+                        
+                        <div class="about-tabs mt-4">
+                            <ul class="nav nav-pills mb-3" id="about-tab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="about-info-tab" data-bs-toggle="pill" data-bs-target="#about-info" type="button" role="tab" aria-controls="about-info" aria-selected="true">Thông tin</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="about-education-tab" data-bs-toggle="pill" data-bs-target="#about-education" type="button" role="tab" aria-controls="about-education" aria-selected="false">Học vấn</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="about-interests-tab" data-bs-toggle="pill" data-bs-target="#about-interests" type="button" role="tab" aria-controls="about-interests" aria-selected="false">Sở thích</button>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="about-tabContent">
+                                <div class="tab-pane fade show active" id="about-info" role="tabpanel" aria-labelledby="about-info-tab">
                         <div class="about-info mt-4">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="info-item mb-3">
                                         <h5><i class="fas fa-envelope me-2"></i> Email</h5>
-                                        <p>hoang@example.com</p>
+                                                    <p>nvhoang286@gmail.com</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="info-item mb-3">
                                         <h5><i class="fas fa-map-marker-alt me-2"></i> Địa điểm</h5>
-                                        <p>Hà Nội, Việt Nam</p>
+                                                    <p>Thủ Đức, TP. Hồ Chí Minh</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="info-item mb-3">
+                                                    <h5><i class="fas fa-phone me-2"></i> Điện thoại</h5>
+                                                    <p>+84 703268656</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="info-item mb-3">
+                                                    <h5><i class="fas fa-globe me-2"></i> Website</h5>
+                                                    <p><a href="https://hoangdevv.github.io/MyPortfolio" target="_blank">hoangdevv.github.io/MyPortfolio</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="info-item mb-3">
-                                        <h5><i class="fas fa-graduation-cap me-2"></i> Học vấn</h5>
-                                        <p>Cử nhân Khoa học Máy tính</p>
+                                <div class="tab-pane fade" id="about-education" role="tabpanel" aria-labelledby="about-education-tab">
+                                    <div class="education-timeline mt-4">
+                                        <div class="education-item">
+                                            <div class="education-year">2021 - 2025</div>
+                                            <h5>Cử nhân Công Nghệ Thông Tin</h5>
+                                            <p>Đại học Công nghệ TP. Hồ Chí Minh - HUTECH</p>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="info-item mb-3">
-                                        <h5><i class="fas fa-briefcase me-2"></i> Kinh nghiệm</h5>
-                                        <p>X+ năm trong lĩnh vực phát triển</p>
+                                <div class="tab-pane fade" id="about-interests" role="tabpanel" aria-labelledby="about-interests-tab">
+                                    <div class="interests-list mt-4">
+                                        <div class="row">
+                                            <div class="col-md-4 mb-3">
+                                                <div class="interest-item">
+                                                    <i class="fas fa-book"></i>
+                                                    <span>Đọc</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 mb-3">
+                                                <div class="interest-item">
+                                                    <i class="fas fa-code"></i>
+                                                    <span>Coding</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 mb-3">
+                                                <div class="interest-item">
+                                                    <i class="fas fa-music"></i>
+                                                    <span>Nhạc</span>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        
                         <div class="mt-4">
-                            <a href="#" class="btn btn-primary me-3">Tải CV</a>
+                            <a href="assets/files/CV NGÔ VĂN HUY HOÀNG - CV-VIE-TopCV.vn.pdf" class="btn btn-primary me-3" download>
+                                Tải CV <i class="fas fa-download ms-1"></i>
+                            </a>
                             <div class="social-links d-inline-block">
-                                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                                <a href="https://github.com/hoangdevv" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://linkedin.com/in/nvhoang" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
                             </div>
                         </div>
                     </div>
@@ -145,54 +217,307 @@ class BackendDeveloper {
             <div class="section-title text-center mb-5" data-aos="fade-up">
                 <h2>Kỹ Năng</h2>
                 <div class="divider mx-auto"></div>
+                <p class="section-subtitle">Những công nghệ và công cụ tôi sử dụng hàng ngày</p>
             </div>
+            
+            <!-- Skill Categories -->
+            <div class="skill-categories mb-5">
+                <ul class="nav nav-pills justify-content-center" id="skills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="backend-tab" data-bs-toggle="pill" data-bs-target="#backend" type="button" role="tab" aria-controls="backend" aria-selected="true">
+                            <i class="fas fa-server me-2"></i>Backend
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="database-tab" data-bs-toggle="pill" data-bs-target="#database" type="button" role="tab" aria-controls="database" aria-selected="false">
+                            <i class="fas fa-database me-2"></i>Cơ sở dữ liệu
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="devops-tab" data-bs-toggle="pill" data-bs-target="#devops" type="button" role="tab" aria-controls="devops" aria-selected="false">
+                            <i class="fas fa-tools me-2"></i>DevOps
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="other-tab" data-bs-toggle="pill" data-bs-target="#other" type="button" role="tab" aria-controls="other" aria-selected="false">
+                            <i class="fas fa-code-branch me-2"></i>Khác
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Skill Content -->
+            <div class="tab-content" id="skills-tabContent">
+                <!-- Backend Skills -->
+                <div class="tab-pane fade show active" id="backend" role="tabpanel" aria-labelledby="backend-tab">
+                    <div class="row">
+                        <div class="col-lg-6" data-aos="fade-right">
+                            <div class="skills-content">
+                                <h3 class="skills-title"><i class="fas fa-code me-3"></i>Ngôn ngữ lập trình</h3>
+                                <p class="skills-description">Tôi chuyên về phát triển backend với các ngôn ngữ hiện đại, tập trung vào hiệu suất và khả năng mở rộng.</p>
+                                
+                                <div class="skill-items">
+                                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="100">
+                                        <div class="skill-info">
+                                            <h4>Java</h4>
+                                            <span class="skill-percentage">90%</span>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div class="progress" style="width: 90%"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="200">
+                                        <div class="skill-info">
+                                            <h4>Node.js</h4>
+                                            <span class="skill-percentage">85%</span>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div class="progress" style="width: 85%"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="300">
+                                        <div class="skill-info">
+                                            <h4>PHP</h4>
+                                            <span class="skill-percentage">80%</span>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div class="progress" style="width: 80%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-6" data-aos="fade-left">
+                            <div class="skills-content">
+                                <h3 class="skills-title"><i class="fas fa-cogs me-3"></i>Frameworks & Nền tảng</h3>
+                                <p class="skills-description">Tôi có kinh nghiệm với các framework hiện đại để xây dựng ứng dụng mạnh mẽ.</p>
+                                
+                                <div class="skill-items">
+                                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="100">
+                                        <div class="skill-info">
+                                            <h4>Spring Framework</h4>
+                                            <span class="skill-percentage">85%</span>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div class="progress" style="width: 85%"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="200">
+                                        <div class="skill-info">
+                                            <h4>Express.js</h4>
+                                            <span class="skill-percentage">85%</span>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div class="progress" style="width: 85%"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="300">
+                                        <div class="skill-info">
+                                            <h4>RESTful APIs</h4>
+                                            <span class="skill-percentage">90%</span>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div class="progress" style="width: 90%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Database Skills -->
+                <div class="tab-pane fade" id="database" role="tabpanel" aria-labelledby="database-tab">
             <div class="row">
-                <!-- Backend Technologies -->
-                <div class="col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="skill-card">
-                        <div class="card-icon mb-4">
-                            <i class="fas fa-server"></i>
+                        <div class="col-lg-6" data-aos="fade-right">
+                            <div class="skills-content">
+                                <h3 class="skills-title"><i class="fas fa-database me-3"></i>Hệ quản trị cơ sở dữ liệu</h3>
+                                <p class="skills-description">Tôi có kinh nghiệm với cả cơ sở dữ liệu quan hệ và NoSQL.</p>
+                                
+                                <div class="skill-items">
+                                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="100">
+                                        <div class="skill-info">
+                                            <h4>MySQL</h4>
+                                            <span class="skill-percentage">90%</span>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div class="progress" style="width: 90%"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="200">
+                                        <div class="skill-info">
+                                            <h4>MongoDB</h4>
+                                            <span class="skill-percentage">85%</span>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div class="progress" style="width: 85%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <h3>Backend Development</h3>
-                        <ul class="skill-list">
-                            <li><span>Node.js & Express</span> <div class="progress-bar"><div class="progress" style="width: 95%"></div></div></li>
-                            <li><span>Python & Django</span> <div class="progress-bar"><div class="progress" style="width: 85%"></div></div></li>
-                            <li><span>PHP & Laravel</span> <div class="progress-bar"><div class="progress" style="width: 80%"></div></div></li>
-                            <li><span>Microservices</span> <div class="progress-bar"><div class="progress" style="width: 85%"></div></div></li>
-                            <li><span>API Design</span> <div class="progress-bar"><div class="progress" style="width: 95%"></div></div></li>
-                        </ul>
                     </div>
                 </div>
-                <!-- Database Technologies -->
-                <div class="col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="skill-card">
-                        <div class="card-icon mb-4">
-                            <i class="fas fa-database"></i>
+                
+                <!-- DevOps Skills -->
+                <div class="tab-pane fade" id="devops" role="tabpanel" aria-labelledby="devops-tab">
+                    <div class="row">
+                        <div class="col-lg-6" data-aos="fade-right">
+                            <div class="skills-content">
+                                <h3 class="skills-title"><i class="fas fa-tools me-3"></i>DevOps & Triển khai</h3>
+                                <p class="skills-description">Tôi có kinh nghiệm với các công cụ DevOps hiện đại.</p>
+                                
+                                <div class="skill-items">
+                                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="100">
+                                        <div class="skill-info">
+                                            <h4>Docker</h4>
+                                            <span class="skill-percentage">80%</span>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div class="progress" style="width: 80%"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="200">
+                                        <div class="skill-info">
+                                            <h4>Render</h4>
+                                            <span class="skill-percentage">75%</span>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div class="progress" style="width: 75%"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="300">
+                                        <div class="skill-info">
+                                            <h4>Railway</h4>
+                                            <span class="skill-percentage">75%</span>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div class="progress" style="width: 75%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <h3>Cơ sở dữ liệu</h3>
-                        <ul class="skill-list">
-                            <li><span>MySQL</span> <div class="progress-bar"><div class="progress" style="width: 90%"></div></div></li>
-                            <li><span>PostgreSQL</span> <div class="progress-bar"><div class="progress" style="width: 85%"></div></div></li>
-                            <li><span>MongoDB</span> <div class="progress-bar"><div class="progress" style="width: 90%"></div></div></li>
-                            <li><span>Redis</span> <div class="progress-bar"><div class="progress" style="width: 80%"></div></div></li>
-                            <li><span>ORM/ODM</span> <div class="progress-bar"><div class="progress" style="width: 85%"></div></div></li>
-                        </ul>
                     </div>
                 </div>
-                <!-- DevOps & Tools -->
-                <div class="col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="skill-card">
-                        <div class="card-icon mb-4">
-                            <i class="fas fa-tools"></i>
+                
+                <!-- Other Skills -->
+                <div class="tab-pane fade" id="other" role="tabpanel" aria-labelledby="other-tab">
+                    <div class="row">
+                        <div class="col-lg-6" data-aos="fade-right">
+                            <div class="skills-content">
+                                <h3 class="skills-title"><i class="fas fa-shield-alt me-3"></i>Bảo mật</h3>
+                                <p class="skills-description">Tôi có kinh nghiệm với các công nghệ bảo mật.</p>
+                                
+                                <div class="skill-items">
+                                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="100">
+                                        <div class="skill-info">
+                                            <h4>JWT</h4>
+                                            <span class="skill-percentage">85%</span>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div class="progress" style="width: 85%"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="200">
+                                        <div class="skill-info">
+                                            <h4>OAuth2</h4>
+                                            <span class="skill-percentage">80%</span>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div class="progress" style="width: 80%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <h3>DevOps & Tools</h3>
-                        <ul class="skill-list">
-                            <li><span>Docker</span> <div class="progress-bar"><div class="progress" style="width: 85%"></div></div></li>
-                            <li><span>CI/CD</span> <div class="progress-bar"><div class="progress" style="width: 80%"></div></div></li>
-                            <li><span>Git & GitHub</span> <div class="progress-bar"><div class="progress" style="width: 95%"></div></div></li>
-                            <li><span>AWS/GCP</span> <div class="progress-bar"><div class="progress" style="width: 75%"></div></div></li>
-                            <li><span>Testing</span> <div class="progress-bar"><div class="progress" style="width: 85%"></div></div></li>
-                        </ul>
+                        
+                        <div class="col-lg-6" data-aos="fade-left">
+                            <div class="skills-content">
+                                <h3 class="skills-title"><i class="fas fa-brain me-3"></i>AI & Công cụ phát triển</h3>
+                                <p class="skills-description">Tôi có kinh nghiệm với các công cụ AI và phát triển.</p>
+                                
+                                <div class="skill-items">
+                                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="100">
+                                        <div class="skill-info">
+                                            <h4>Claude Sonnet</h4>
+                                            <span class="skill-percentage">85%</span>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div class="progress" style="width: 85%"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="200">
+                                        <div class="skill-info">
+                                            <h4>Deepseek</h4>
+                                            <span class="skill-percentage">80%</span>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div class="progress" style="width: 80%"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="300">
+                                        <div class="skill-info">
+                                            <h4>GPT-4o</h4>
+                                            <span class="skill-percentage">85%</span>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div class="progress" style="width: 85%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Technologies Icons -->
+            <div class="technologies-container mt-5" data-aos="fade-up">
+                <h3 class="text-center mb-4">Công nghệ tôi sử dụng</h3>
+                <div class="technologies-icons">
+                    <div class="tech-icon" data-aos="zoom-in" data-aos-delay="100">
+                        <i class="fab fa-java"></i>
+                        <span>Java</span>
+                    </div>
+                    <div class="tech-icon" data-aos="zoom-in" data-aos-delay="150">
+                        <i class="fab fa-node-js"></i>
+                        <span>Node.js</span>
+                    </div>
+                    <div class="tech-icon" data-aos="zoom-in" data-aos-delay="200">
+                        <i class="fab fa-php"></i>
+                        <span>PHP</span>
+                    </div>
+                    <div class="tech-icon" data-aos="zoom-in" data-aos-delay="250">
+                        <i class="fas fa-database"></i>
+                        <span>MySQL</span>
+                    </div>
+                    <div class="tech-icon" data-aos="zoom-in" data-aos-delay="300">
+                        <i class="fas fa-server"></i>
+                        <span>MongoDB</span>
+                    </div>
+                    <div class="tech-icon" data-aos="zoom-in" data-aos-delay="350">
+                        <i class="fab fa-docker"></i>
+                        <span>Docker</span>
+                    </div>
+                    <div class="tech-icon" data-aos="zoom-in" data-aos-delay="400">
+                        <i class="fab fa-git-alt"></i>
+                        <span>Git</span>
+                    </div>
+                    <div class="tech-icon" data-aos="zoom-in" data-aos-delay="450">
+                        <i class="fab fa-js"></i>
+                        <span>JavaScript</span>
                     </div>
                 </div>
             </div>
@@ -205,75 +530,117 @@ class BackendDeveloper {
             <div class="section-title text-center mb-5" data-aos="fade-up">
                 <h2>Dự Án</h2>
                 <div class="divider mx-auto"></div>
+                <p class="section-subtitle">Những sản phẩm tôi đã tạo ra với đam mê và sáng tạo</p>
             </div>
+            
+            <div class="projects-showcase" data-aos="fade-up">
+                <!-- Featured Project -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Website Tuyển dụng và tìm kiếm việc làm</h3>
+                        <div class="project-badge">Dự án nổi bật</div>
+                    </div>
+                    
+                    <div class="project-body">
             <div class="row">
-                <!-- Project 1 -->
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="flip-left">
-                    <div class="project-card">
+                            <div class="col-lg-6">
                         <div class="project-image">
-                            <img src="https://via.placeholder.com/600x400" alt="Dự án 1" class="img-fluid">
+                                    <img src="assets/img/projects/job-portal.jpg" alt="Website Tuyển dụng và tìm kiếm việc làm" class="img-fluid rounded">
                         </div>
-                        <div class="project-content">
-                            <h4>Hệ thống Quản lý Tài nguyên</h4>
-                            <p>Phát triển backend cho hệ thống quản lý tài nguyên doanh nghiệp với Node.js, Express và MongoDB.</p>
-                            <div class="tech-stack">
-                                <span>Node.js</span>
-                                <span>Express</span>
-                                <span>MongoDB</span>
                             </div>
-                            <div class="project-links mt-3">
-                                <a href="#" class="btn-project"><i class="fas fa-link"></i> Demo</a>
-                                <a href="#" class="btn-project"><i class="fab fa-github"></i> GitHub</a>
+                            <div class="col-lg-6">
+                                <div class="project-content">
+                                    <p class="project-description">Nền tảng tuyển dụng và tìm kiếm việc làm, hỗ trợ đăng tin tuyển dụng, tìm kiếm ứng viên, gửi thông báo qua email, nhận tin thời gian thực và thanh toán trực tuyến.</p>
+                                    
+                                    <div class="project-tech">
+                                        <h5>Công nghệ sử dụng:</h5>
+                                        <div class="tech-tags">
+                                            <span class="tech-tag">Spring Boot</span>
+                                            <span class="tech-tag">React</span>
+                                            <span class="tech-tag">MySQL</span>
+                                            <span class="tech-tag">WebSocket</span>
+                                            <span class="tech-tag">JWT</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="project-actions">
+                                        <a href="https://github.com/hoangdevv/DACN-4NTH-WebsiteTimKiemViecLam" target="_blank" class="btn btn-outline-primary">
+                                            <i class="fab fa-github"></i> Mã nguồn
+                                        </a>
+                                        <a href="https://workfinder-exquisite-llama-47b911.netlify.app" target="_blank" class="btn btn-outline-primary">
+                                            <i class="fas fa-external-link-alt"></i> Demo
+                                        </a>
+                                        <a href="project-jobportal.html" class="btn btn-primary">
+                                            <i class="fas fa-info-circle"></i> Chi tiết
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- Project 2 -->
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="flip-left" data-aos-delay="100">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://via.placeholder.com/600x400" alt="Dự án 2" class="img-fluid">
+                
+                <!-- Other Projects -->
+                <h4 class="other-projects-title mt-5" data-aos="fade-up">Các dự án khác</h4>
+                <div class="row">
+                    <!-- Project 2 - Website Xem Phim -->
+                    <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="project-card-small">
+                            <div class="project-header">
+                                <div class="project-links">
+                                    <a href="https://github.com/hoangdevv" target="_blank"><i class="fab fa-github"></i></a>
+                                    <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                                <i class="project-folder fas fa-folder"></i>
+                            </div>
+                            <h4 class="project-title">Website Xem Phim</h4>
+                            <p class="project-description">Nền tảng xem phim trực tuyến với các tính năng xem phim, trailer, bình luận, yêu thích và chống tool download. Sử dụng TMDb API để lấy dữ liệu phim và lưu vào database.</p>
+                            <div class="project-footer">
+                                <ul class="project-tech-list">
+                                    <li>Express.js</li>
+                                    <li>Next.js</li>
+                                    <li>MongoDB</li>
+                                    <li>TMDb API</li>
+                                </ul>
+                            </div>
+                            <a href="project-movie.html" class="btn btn-sm btn-outline-primary mt-3">
+                                <i class="fas fa-info-circle"></i> Chi tiết
+                            </a>
                         </div>
-                        <div class="project-content">
-                            <h4>API Phân tích Dữ liệu</h4>
-                            <p>Thiết kế và xây dựng REST API cho việc phân tích dữ liệu với Python, Django và PostgreSQL.</p>
-                            <div class="tech-stack">
-                                <span>Python</span>
-                                <span>Django</span>
-                                <span>PostgreSQL</span>
+                    </div>
+                    
+                    <!-- Project 3 - Website Build CV -->
+                    <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="project-card-small">
+                            <div class="project-header">
+                                <div class="project-links">
+                                    <a href="https://github.com/hoangdevv" target="_blank"><i class="fab fa-github"></i></a>
+                                    <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                                <i class="project-folder fas fa-folder"></i>
                             </div>
-                            <div class="project-links mt-3">
-                                <a href="#" class="btn-project"><i class="fas fa-link"></i> Demo</a>
-                                <a href="#" class="btn-project"><i class="fab fa-github"></i> GitHub</a>
+                            <h4 class="project-title">Website Build CV</h4>
+                            <p class="project-description">Ứng dụng web giúp người dùng tạo CV chuyên nghiệp với nhiều mẫu đẹp mắt. Hỗ trợ tùy chỉnh nội dung, xuất PDF và lưu trữ CV trực tuyến.</p>
+                            <div class="project-footer">
+                                <ul class="project-tech-list">
+                                    <li>PHP</li>
+                                    <li>MySQL</li>
+                                    <li>JavaScript</li>
+                                    <li>Bootstrap</li>
+                                </ul>
                             </div>
+                            <a href="project-cv.html" class="btn btn-sm btn-outline-primary mt-3">
+                                <i class="fas fa-info-circle"></i> Chi tiết
+                            </a>
                         </div>
                     </div>
                 </div>
-                <!-- Project 3 -->
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="flip-left" data-aos-delay="200">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://via.placeholder.com/600x400" alt="Dự án 3" class="img-fluid">
-                        </div>
-                        <div class="project-content">
-                            <h4>Microservices E-commerce</h4>
-                            <p>Phát triển hệ thống microservices cho nền tảng thương mại điện tử với Node.js, Docker và Redis.</p>
-                            <div class="tech-stack">
-                                <span>Node.js</span>
-                                <span>Docker</span>
-                                <span>Redis</span>
-                                <span>Kafka</span>
-                            </div>
-                            <div class="project-links mt-3">
-                                <a href="#" class="btn-project"><i class="fas fa-link"></i> Demo</a>
-                                <a href="#" class="btn-project"><i class="fab fa-github"></i> GitHub</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
+                <div class="text-center mt-4" data-aos="fade-up">
+                    <a href="https://github.com/hoangdevv" target="_blank" class="btn btn-outline-primary">
+                        Xem thêm dự án trên GitHub <i class="fab fa-github ms-2"></i>
+                    </a>
             </div>
-            <div class="text-center mt-4" data-aos="fade-up">
-                <a href="#" class="btn btn-outline-primary">Xem Thêm Dự Án</a>
             </div>
         </div>
     </section>
@@ -284,114 +651,53 @@ class BackendDeveloper {
             <div class="section-title text-center mb-5" data-aos="fade-up">
                 <h2>Kinh Nghiệm</h2>
                 <div class="divider mx-auto"></div>
+                <p class="section-subtitle">Hành trình học tập và phát triển kỹ năng của tôi</p>
             </div>
+            
             <div class="timeline" data-aos="fade-up">
-                <!-- Experience 1 -->
+                <!-- Student & Developer -->
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content" data-aos="fade-left">
-                        <div class="timeline-date">2021 - Hiện tại</div>
-                        <h4>Senior Backend Developer</h4>
-                        <h5>Công ty ABC Technology</h5>
-                        <p>Phát triển và duy trì hệ thống backend cho nhiều ứng dụng quy mô lớn, hướng dẫn đội ngũ junior developer và tối ưu hóa hiệu suất hệ thống.</p>
-                        <ul class="timeline-achievements">
-                            <li>Cải thiện thời gian phản hồi API lên 40%</li>
-                            <li>Phát triển kiến trúc microservices cho hệ thống mới</li>
-                            <li>Thiết lập CI/CD pipeline cho quy trình phát triển</li>
-                        </ul>
+                        <div class="timeline-header">
+                            <h3>Sinh viên Công nghệ Thông tin & Freelance Developer</h3>
+                            <span class="company">Trường Đại học Công nghệ TP.HCM (HUTECH)</span>
+                            <span class="period">2021 - 2025</span>
+                        </div>
+                        <div class="timeline-body">
+                            <p>Học tập và phát triển các kỹ năng lập trình thông qua các dự án học thuật. Song song với việc học, tôi tự phát triển các dự án cá nhân để nâng cao kỹ năng và xây dựng portfolio.</p>
+                            <ul class="timeline-achievements">
+                                <li>Đồ án chuyên ngành: Xây dựng website tuyển dụng và tìm kiếm việc làm sử dụng Spring Boot và React</li>
+                                <li>Phát triển website xem phim với Express.js, Next.js và MongoDB, sử dụng TMDb API để lấy dữ liệu phim</li>
+                                <li>Tạo ứng dụng web xây dựng CV sử dụng PHP và MySQL với các tính năng tùy chỉnh nội dung và xuất PDF</li>
+                                <li>Tham gia câu lạc bộ lập trình HUTECH và đóng góp vào các dự án nhóm</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <!-- Experience 2 -->
+                
+                <!-- Education -->
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content" data-aos="fade-right">
-                        <div class="timeline-date">2019 - 2021</div>
-                        <h4>Backend Developer</h4>
-                        <h5>Công ty XYZ Solutions</h5>
-                        <p>Phát triển các giải pháp backend với Node.js và Express, làm việc với cơ sở dữ liệu MongoDB và triển khai API REST.</p>
-                        <ul class="timeline-achievements">
-                            <li>Xây dựng hệ thống xác thực và phân quyền người dùng</li>
-                            <li>Thiết kế và triển khai database schema hiệu quả</li>
-                            <li>Tích hợp các dịch vụ bên thứ ba như thanh toán, thông báo</li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Experience 3 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content" data-aos="fade-left">
-                        <div class="timeline-date">2017 - 2019</div>
-                        <h4>Junior Developer</h4>
-                        <h5>Công ty DEF Tech</h5>
-                        <p>Làm việc trong môi trường phát triển full-stack, với trọng tâm ngày càng nhiều vào backend với PHP và MySQL.</p>
-                        <ul class="timeline-achievements">
-                            <li>Tham gia phát triển ứng dụng web cho nhiều khách hàng</li>
-                            <li>Học hỏi và áp dụng các framework phát triển web hiện đại</li>
-                            <li>Hiểu biết cơ bản về qui trình phát triển phần mềm</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="testimonials-section py-5">
-        <div class="container">
-            <div class="section-title text-center mb-5" data-aos="fade-up">
-                <h2>Nhận Xét</h2>
-                <div class="divider mx-auto"></div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <!-- Testimonial 1 -->
-                            <div class="carousel-item active">
-                                <div class="testimonial-item text-center" data-aos="zoom-in">
-                                    <div class="testimonial-avatar">
-                                        <img src="https://via.placeholder.com/80" alt="Avatar" class="rounded-circle">
-                                    </div>
-                                    <div class="testimonial-content">
-                                        <p>"Hoàng là một backend developer xuất sắc, luôn đưa ra các giải pháp hiệu quả và có thể mở rộng. Kiến thức kỹ thuật và khả năng giải quyết vấn đề của anh ấy đã giúp dự án của chúng tôi thành công vượt mong đợi."</p>
-                                        <h5>Nguyễn Văn A</h5>
-                                        <span>CTO, Công ty ABC Technology</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Testimonial 2 -->
-                            <div class="carousel-item">
-                                <div class="testimonial-item text-center" data-aos="zoom-in">
-                                    <div class="testimonial-avatar">
-                                        <img src="https://via.placeholder.com/80" alt="Avatar" class="rounded-circle">
-                                    </div>
-                                    <div class="testimonial-content">
-                                        <p>"Tôi đã làm việc với Hoàng trong nhiều dự án, và tôi luôn ấn tượng với kiến thức sâu rộng của anh ấy về hệ thống backend và khả năng tìm ra giải pháp sáng tạo cho các vấn đề phức tạp."</p>
-                                        <h5>Trần Thị B</h5>
-                                        <span>Project Manager, XYZ Solutions</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Testimonial 3 -->
-                            <div class="carousel-item">
-                                <div class="testimonial-item text-center" data-aos="zoom-in">
-                                    <div class="testimonial-avatar">
-                                        <img src="https://via.placeholder.com/80" alt="Avatar" class="rounded-circle">
-                                    </div>
-                                    <div class="testimonial-content">
-                                        <p>"Hoàng không chỉ là một developer giỏi mà còn là một người đồng nghiệp tuyệt vời. Anh ấy luôn sẵn sàng giúp đỡ và chia sẻ kiến thức, điều này đã nâng cao hiệu suất của cả đội."</p>
-                                        <h5>Lê Văn C</h5>
-                                        <span>Senior Frontend Developer, DEF Tech</span>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="timeline-header">
+                            <h3>Học vấn</h3>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-                            <i class="fas fa-chevron-left"></i>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-                            <i class="fas fa-chevron-right"></i>
-                        </button>
+                        <div class="timeline-body">
+                            <p>Chuyên ngành Công nghệ phần mềm với nền tảng kiến thức vững chắc về lập trình và phát triển phần mềm.</p>
+                            <ul class="timeline-achievements">
+                                <li>Học và thực hành Lập trình Hướng đối tượng (OOP)</li>
+                                <li>Nắm cơ bản kiến thức về phân tích và thiết kế hệ thống</li>
+                                <li>Học về cấu trúc dữ liệu và thuật toán</li>
+                                <li>Tham gia các cuộc thi lập trình của trường:
+                                    <ul>
+                                        <li>Databae Design 2024</li>
+                                        <li>Find IT Talent 2023</li>
+                                        <li>Find IT Talent 2024</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -404,71 +710,115 @@ class BackendDeveloper {
             <div class="section-title text-center mb-5" data-aos="fade-up">
                 <h2>Liên Hệ</h2>
                 <div class="divider mx-auto"></div>
+                <p class="section-subtitle">Hãy kết nối và bắt đầu dự án tiếp theo của bạn</p>
             </div>
+            
             <div class="row">
                 <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-right">
                     <div class="contact-info">
-                        <h3>Thông tin liên hệ</h3>
-                        <p>Nếu bạn có bất kỳ dự án hoặc cơ hội hợp tác nào, đừng ngần ngại liên hệ với tôi qua các kênh sau:</p>
-                        <div class="info-item">
-                            <div class="info-icon">
+                        <div class="contact-intro">
+                            <h3>Hãy bắt đầu một cuộc trò chuyện</h3>
+                            <p>Bạn có dự án cần triển khai? Hoặc chỉ muốn trao đổi về công nghệ? Tôi luôn sẵn sàng lắng nghe và hỗ trợ bạn.</p>
+                        </div>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-method-item">
+                                <div class="contact-icon">
                                 <i class="fas fa-envelope"></i>
                             </div>
-                            <div class="info-text">
+                                <div class="contact-details">
                                 <h5>Email</h5>
-                                <p>hoang@example.com</p>
+                                    <p><a href="mailto:nvhoang286@gmail.com">nvhoang286@gmail.com</a></p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h5>Điện thoại</h5>
+                                    <p><a href="tel:+84703268656">+84 703268656</a></p>
+                        </div>
+                            </div>
+                            
+                            <div class="contact-method-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h5>Địa chỉ</h5>
+                                    <p>Thủ Đức, TP. Hồ Chí Minh</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="info-item">
-                            <div class="info-icon">
-                                <i class="fas fa-phone"></i>
+                        
+                        <div class="contact-social">
+                            <h5>Kết nối với tôi</h5>
+                            <div class="social-links">
+                                <a href="https://github.com/hoangdevv" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://linkedin.com/in/nvhoang" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
                             </div>
-                            <div class="info-text">
-                                <h5>Điện thoại</h5>
-                                <p>+84 123 456 789</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="info-text">
-                                <h5>Địa chỉ</h5>
-                                <p>Hà Nội, Việt Nam</p>
-                            </div>
-                        </div>
-                        <div class="social-links mt-4">
-                            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
                         </div>
                     </div>
                 </div>
+                
                 <div class="col-lg-7" data-aos="fade-left">
-                    <div class="contact-form">
-                        <form id="contactForm">
+                    <div class="contact-form-container">
+                        <form id="contactForm" class="contact-form needs-validation" novalidate>
                             <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <input type="text" class="form-control" id="name" placeholder="Họ và tên" required>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="name">Họ và tên</label>
+                                        <input type="text" id="name" class="form-control" required>
+                                        <div class="invalid-feedback">
+                                            Vui lòng nhập họ tên của bạn
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-md-6 mb-3">
-                                    <input type="email" class="form-control" id="email" placeholder="Email" required>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <input type="email" id="email" class="form-control" required>
+                                        <div class="invalid-feedback">
+                                            Vui lòng nhập email hợp lệ
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="mb-3">
-                                <input type="text" class="form-control" id="subject" placeholder="Tiêu đề" required>
+                            
+                            <div class="form-group">
+                                <label for="subject">Tiêu đề</label>
+                                <input type="text" id="subject" class="form-control" required>
+                                <div class="invalid-feedback">
+                                    Vui lòng nhập tiêu đề
+                                </div>
                             </div>
-                            <div class="mb-3">
-                                <textarea class="form-control" id="message" rows="5" placeholder="Nội dung tin nhắn" required></textarea>
+                            
+                            <div class="form-group">
+                                <label for="message">Nội dung tin nhắn</label>
+                                <textarea id="message" rows="5" class="form-control" required></textarea>
+                                <div class="invalid-feedback">
+                                    Vui lòng nhập nội dung tin nhắn
+                                </div>
                             </div>
-                            <div class="text-center">
-                                <button type="submit" class="btn btn-primary">Gửi Tin Nhắn</button>
+                            
+                            <div class="form-submit">
+                                <button type="submit" class="btn btn-primary">
+                                    <span>Gửi tin nhắn</span>
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
+        </div>
+        
+        <div class="contact-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
         </div>
     </section>
 
