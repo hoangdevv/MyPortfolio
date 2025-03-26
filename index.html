@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hoàng Dev - Backend Developer Portfolio</title>
+    <title>Hoàng Dev - Java Developer Portfolio</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -40,15 +40,15 @@
         </div>
     </nav>
 
-    <!-- Header/Hero Section -->
+   <!-- Header/Hero Section -->
     <header class="masthead" id="trang-chu">
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1200">
                     <div class="hero-content">
                         <h1 class="fw-bold">Xin chào, tôi là <span class="highlight">Hoàng</span></h1>
-                        <h2 class="mb-4">Backend Developer</h2>
-                        <p class="lead mb-5">Tôi chuyên phát triển các giải pháp backend hiệu suất cao, an toàn và có khả năng mở rộng.</p>
+                        <h2 class="mb-4">Java Backend Developer</h2>
+                        <p class="lead mb-5">Chuyên xây dựng API hiệu quả, tối ưu hóa hiệu suất cơ sở dữ liệu và bảo mật ứng dụng với Spring Boot & Cloud platforms.</p>
                         <div class="hero-buttons">
                             <a href="#du-an" class="btn btn-primary me-3">Xem Dự Án</a>
                             <a href="#lien-he" class="btn btn-outline-light">Liên Hệ</a>
@@ -59,27 +59,39 @@
                     <div class="hero-image">
                         <div class="code-container">
                             <pre><code>
-class BackendDeveloper {
+class JavaDeveloper {
     constructor() {
         this.name = "Hoàng";
-        this.role = "Backend Developer";
+        this.role = "Java Backend Developer";
         this.skills = [
-            "Java", "Node.js", 
-            "PHP", "Spring Framework",
-            "Express.js", "MongoDB", "MySQL"
+            "Java", "Spring Boot", "RESTful APIs",
+            "MySQL", "MongoDB", "Spring Security",
+            "Docker", "WebSocket/STOMP"
         ];
-        this.passion = "Building scalable systems";
+        this.focus = "Scalable APIs & Secure Systems";
+        this.achievements = [
+            "Top 20-30 Database Design 2024",
+            "Semi-finalist - Find IT Talent 2023, 2024"
+        ];
     }
 
-    createSolution(problem) {
-        return this.skills
+    buildSolution(problem) {
+        const solution = this.skills
             .filter(skill => skill.canSolve(problem))
             .map(skill => skill.implement());
+        
+        return {
+            isScalable: true,
+            isSecure: true,
+            solution: solution
+        };
     }
     
-    continuallyLearn() {
-        // Always improving...
-        return new Knowledge();
+    keepLearning() {
+        return {
+            currentFocus: "Microservices & Cloud Deployment",
+            technologies: ["OAuth2", "JWT", "Docker"]
+        };
     }
 }
                             </code></pre>
@@ -91,31 +103,31 @@ class BackendDeveloper {
         <div id="particles-js" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
     </header>
 
-    <!-- About Section -->
-    <section class="about-section py-5" id="gioi-thieu">
-        <div class="container">
-            <div class="section-title text-center mb-5" data-aos="fade-up">
-                <h2>Giới Thiệu</h2>
-                <div class="divider mx-auto"></div>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-right">
-                    <div class="about-image">
-                        <!-- Thay thế đường dẫn bằng ảnh thật của bạn -->
-                        <img src="assets/img/profile.png" alt="Hoàng - Backend Developer" class="img-fluid rounded-3 shadow">
-                        <div class="about-shape"></div>
-                        <div class="experience-badge">
-                            <span class="exp-number">0+</span>
-                            <span class="exp-text">Năm<br>Kinh nghiệm</span>
-                        </div>
+   <!-- About Section -->
+<section class="about-section py-5" id="gioi-thieu">
+    <div class="container">
+        <div class="section-title text-center mb-5" data-aos="fade-up">
+            <h2>Giới Thiệu</h2>
+            <div class="divider mx-auto"></div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-right">
+                <div class="about-image">
+                    <!-- Thay thế đường dẫn bằng ảnh thật của bạn -->
+                    <img src="assets/img/profile.png" alt="Hoàng - Java Backend Developer" class="img-fluid rounded-3 shadow">
+                    <div class="about-shape"></div>
+                    <div class="experience-badge">
+                        <span class="exp-number">0+</span>
+                        <span class="exp-text">Năm<br>Kinh nghiệm</span>
                     </div>
                 </div>
-                <div class="col-lg-7" data-aos="fade-left">
-                    <div class="about-content">
-                        <div class="about-greeting">Xin chào! Tôi là</div>
-                        <h3>Backend Developer với niềm đam mê tạo ra các giải pháp hiệu quả</h3>
-                        <p class="lead">Thực tập sinh Backend Developer đầy nhiệt huyết với nền tảng vững chắc về Java, Node.js, PHP. Luôn sẵn sàng học hỏi, nâng cao kỹ năng và đóng góp vào các dự án thực tế.</p>
-                        <p>Mong muốn làm việc trong môi trường chuyên nghiệp để phát triển bản thân và tích lũy kinh nghiệm từ các tiền bối.</p>
+            </div>
+            <div class="col-lg-7" data-aos="fade-left">
+                <div class="about-content">
+                    <div class="about-greeting">Xin chào! Tôi là</div>
+                    <h3>Java Backend Developer với khát vọng tạo ra giá trị thực tế</h3>
+                    <p class="lead">Sinh viên Công nghệ Phần mềm tại HUTECH với nền tảng vững chắc về Java, Spring Boot và các công nghệ backend hiện đại.</p>
+                    <p>Tôi tập trung phát triển các hệ thống API масштабируемый, tối ưu hóa cơ sở dữ liệu và bảo mật ứng dụng. Mục tiêu của tôi là làm việc trong môi trường năng động, học hỏi từ thực tế và đóng góp vào các dự án công nghệ sáng tạo.</p>
                         
                         <div class="about-tabs mt-4">
                             <ul class="nav nav-pills mb-3" id="about-tab" role="tablist">
@@ -197,7 +209,7 @@ class BackendDeveloper {
                         </div>
                         
                         <div class="mt-4">
-                            <a href="assets/files/CV NGÔ VĂN HUY HOÀNG - CV-VIE-TopCV.vn.pdf" class="btn btn-primary me-3" download>
+                            <a href="assets/files/NGÔ VĂN HUY HOÀNG-JAVA-DEV-EN.pdf" class="btn btn-primary me-3" download>
                                 Tải CV <i class="fas fa-download ms-1"></i>
                             </a>
                             <div class="social-links d-inline-block">
@@ -217,7 +229,7 @@ class BackendDeveloper {
             <div class="section-title text-center mb-5" data-aos="fade-up">
                 <h2>Kỹ Năng</h2>
                 <div class="divider mx-auto"></div>
-                <p class="section-subtitle">Những công nghệ và công cụ tôi sử dụng hàng ngày</p>
+                <p class="section-subtitle">Những công nghệ và công cụ tôi sử dụng để xây dựng hệ thống hiệu quả</p>
             </div>
             
             <!-- Skill Categories -->
@@ -239,8 +251,8 @@ class BackendDeveloper {
                         </button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="other-tab" data-bs-toggle="pill" data-bs-target="#other" type="button" role="tab" aria-controls="other" aria-selected="false">
-                            <i class="fas fa-code-branch me-2"></i>Khác
+                        <button class="nav-link" id="security-tab" data-bs-toggle="pill" data-bs-target="#security" type="button" role="tab" aria-controls="security" aria-selected="false">
+                            <i class="fas fa-shield-alt me-2"></i>Bảo mật
                         </button>
                     </li>
                 </ul>
@@ -254,78 +266,22 @@ class BackendDeveloper {
                         <div class="col-lg-6" data-aos="fade-right">
                             <div class="skills-content">
                                 <h3 class="skills-title"><i class="fas fa-code me-3"></i>Ngôn ngữ lập trình</h3>
-                                <p class="skills-description">Tôi chuyên về phát triển backend với các ngôn ngữ hiện đại, tập trung vào hiệu suất và khả năng mở rộng.</p>
-                                
-                                <div class="skill-items">
-                                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="100">
-                                        <div class="skill-info">
-                                            <h4>Java</h4>
-                                            <span class="skill-percentage">90%</span>
-                                        </div>
-                                        <div class="progress-bar">
-                                            <div class="progress" style="width: 90%"></div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="200">
-                                        <div class="skill-info">
-                                            <h4>Node.js</h4>
-                                            <span class="skill-percentage">85%</span>
-                                        </div>
-                                        <div class="progress-bar">
-                                            <div class="progress" style="width: 85%"></div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="300">
-                                        <div class="skill-info">
-                                            <h4>PHP</h4>
-                                            <span class="skill-percentage">80%</span>
-                                        </div>
-                                        <div class="progress-bar">
-                                            <div class="progress" style="width: 80%"></div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <p class="skills-description">Tôi sử dụng các ngôn ngữ lập trình mạnh mẽ để phát triển backend.</p>
+                                <ul class="skill-list">
+                                    <li data-aos="fade-up" data-aos-delay="100"><i class="fas fa-check-circle me-2"></i>Java</li>
+                                    <li data-aos="fade-up" data-aos-delay="200"><i class="fas fa-check-circle me-2"></i>Node.js</li>
+                                </ul>
                             </div>
                         </div>
-                        
                         <div class="col-lg-6" data-aos="fade-left">
                             <div class="skills-content">
-                                <h3 class="skills-title"><i class="fas fa-cogs me-3"></i>Frameworks & Nền tảng</h3>
-                                <p class="skills-description">Tôi có kinh nghiệm với các framework hiện đại để xây dựng ứng dụng mạnh mẽ.</p>
-                                
-                                <div class="skill-items">
-                                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="100">
-                                        <div class="skill-info">
-                                            <h4>Spring Framework</h4>
-                                            <span class="skill-percentage">85%</span>
-                                        </div>
-                                        <div class="progress-bar">
-                                            <div class="progress" style="width: 85%"></div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="200">
-                                        <div class="skill-info">
-                                            <h4>Express.js</h4>
-                                            <span class="skill-percentage">85%</span>
-                                        </div>
-                                        <div class="progress-bar">
-                                            <div class="progress" style="width: 85%"></div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="300">
-                                        <div class="skill-info">
-                                            <h4>RESTful APIs</h4>
-                                            <span class="skill-percentage">90%</span>
-                                        </div>
-                                        <div class="progress-bar">
-                                            <div class="progress" style="width: 90%"></div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <h3 class="skills-title"><i class="fas fa-cogs me-3"></i>Frameworks & Công nghệ</h3>
+                                <p class="skills-description">Tôi làm việc với các công nghệ hiện đại để xây dựng hệ thống hiệu quả.</p>
+                                <ul class="skill-list">
+                                    <li data-aos="fade-up" data-aos-delay="100"><i class="fas fa-check-circle me-2"></i>Spring Boot</li>
+                                    <li data-aos="fade-up" data-aos-delay="200"><i class="fas fa-check-circle me-2"></i>Express.js</li>
+                                    <li data-aos="fade-up" data-aos-delay="300"><i class="fas fa-check-circle me-2"></i>WebSocket/STOMP</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -333,33 +289,16 @@ class BackendDeveloper {
                 
                 <!-- Database Skills -->
                 <div class="tab-pane fade" id="database" role="tabpanel" aria-labelledby="database-tab">
-            <div class="row">
+                    <div class="row">
                         <div class="col-lg-6" data-aos="fade-right">
                             <div class="skills-content">
                                 <h3 class="skills-title"><i class="fas fa-database me-3"></i>Hệ quản trị cơ sở dữ liệu</h3>
-                                <p class="skills-description">Tôi có kinh nghiệm với cả cơ sở dữ liệu quan hệ và NoSQL.</p>
-                                
-                                <div class="skill-items">
-                                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="100">
-                                        <div class="skill-info">
-                                            <h4>MySQL</h4>
-                                            <span class="skill-percentage">90%</span>
-                                        </div>
-                                        <div class="progress-bar">
-                                            <div class="progress" style="width: 90%"></div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="200">
-                                        <div class="skill-info">
-                                            <h4>MongoDB</h4>
-                                            <span class="skill-percentage">85%</span>
-                                        </div>
-                                        <div class="progress-bar">
-                                            <div class="progress" style="width: 85%"></div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <p class="skills-description">Tôi làm việc với các hệ cơ sở dữ liệu để tối ưu hóa dữ liệu.</p>
+                                <ul class="skill-list">
+                                    <li data-aos="fade-up" data-aos-delay="100"><i class="fas fa-check-circle me-2"></i>MySQL</li>
+                                    <li data-aos="fade-up" data-aos-delay="200"><i class="fas fa-check-circle me-2"></i>MongoDB</li>
+                                    <li data-aos="fade-up" data-aos-delay="300"><i class="fas fa-check-circle me-2"></i>JPA/Hibernate</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -371,112 +310,29 @@ class BackendDeveloper {
                         <div class="col-lg-6" data-aos="fade-right">
                             <div class="skills-content">
                                 <h3 class="skills-title"><i class="fas fa-tools me-3"></i>DevOps & Triển khai</h3>
-                                <p class="skills-description">Tôi có kinh nghiệm với các công cụ DevOps hiện đại.</p>
-                                
-                                <div class="skill-items">
-                                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="100">
-                                        <div class="skill-info">
-                                            <h4>Docker</h4>
-                                            <span class="skill-percentage">80%</span>
-                                        </div>
-                                        <div class="progress-bar">
-                                            <div class="progress" style="width: 80%"></div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="200">
-                                        <div class="skill-info">
-                                            <h4>Render</h4>
-                                            <span class="skill-percentage">75%</span>
-                                        </div>
-                                        <div class="progress-bar">
-                                            <div class="progress" style="width: 75%"></div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="300">
-                                        <div class="skill-info">
-                                            <h4>Railway</h4>
-                                            <span class="skill-percentage">75%</span>
-                                        </div>
-                                        <div class="progress-bar">
-                                            <div class="progress" style="width: 75%"></div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <p class="skills-description">Tôi sử dụng các công cụ để triển khai ứng dụng một cách hiệu quả.</p>
+                                <ul class="skill-list">
+                                    <li data-aos="fade-up" data-aos-delay="100"><i class="fas fa-check-circle me-2"></i>Docker</li>
+                                    <li data-aos="fade-up" data-aos-delay="200"><i class="fas fa-check-circle me-2"></i>Render</li>
+                                    <li data-aos="fade-up" data-aos-delay="300"><i class="fas fa-check-circle me-2"></i>Railway</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Other Skills -->
-                <div class="tab-pane fade" id="other" role="tabpanel" aria-labelledby="other-tab">
+                <!-- Security Skills -->
+                <div class="tab-pane fade" id="security" role="tabpanel" aria-labelledby="security-tab">
                     <div class="row">
                         <div class="col-lg-6" data-aos="fade-right">
                             <div class="skills-content">
                                 <h3 class="skills-title"><i class="fas fa-shield-alt me-3"></i>Bảo mật</h3>
-                                <p class="skills-description">Tôi có kinh nghiệm với các công nghệ bảo mật.</p>
-                                
-                                <div class="skill-items">
-                                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="100">
-                                        <div class="skill-info">
-                                            <h4>JWT</h4>
-                                            <span class="skill-percentage">85%</span>
-                                        </div>
-                                        <div class="progress-bar">
-                                            <div class="progress" style="width: 85%"></div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="200">
-                                        <div class="skill-info">
-                                            <h4>OAuth2</h4>
-                                            <span class="skill-percentage">80%</span>
-                                        </div>
-                                        <div class="progress-bar">
-                                            <div class="progress" style="width: 80%"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-lg-6" data-aos="fade-left">
-                            <div class="skills-content">
-                                <h3 class="skills-title"><i class="fas fa-brain me-3"></i>AI & Công cụ phát triển</h3>
-                                <p class="skills-description">Tôi có kinh nghiệm với các công cụ AI và phát triển.</p>
-                                
-                                <div class="skill-items">
-                                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="100">
-                                        <div class="skill-info">
-                                            <h4>Claude Sonnet</h4>
-                                            <span class="skill-percentage">85%</span>
-                                        </div>
-                                        <div class="progress-bar">
-                                            <div class="progress" style="width: 85%"></div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="200">
-                                        <div class="skill-info">
-                                            <h4>Deepseek</h4>
-                                            <span class="skill-percentage">80%</span>
-                                        </div>
-                                        <div class="progress-bar">
-                                            <div class="progress" style="width: 80%"></div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="skill-item" data-aos="zoom-in" data-aos-delay="300">
-                                        <div class="skill-info">
-                                            <h4>GPT-4o</h4>
-                                            <span class="skill-percentage">85%</span>
-                                        </div>
-                                        <div class="progress-bar">
-                                            <div class="progress" style="width: 85%"></div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <p class="skills-description">Tôi triển khai các giải pháp bảo mật cho ứng dụng.</p>
+                                <ul class="skill-list">
+                                    <li data-aos="fade-up" data-aos-delay="100"><i class="fas fa-check-circle me-2"></i>Spring Security</li>
+                                    <li data-aos="fade-up" data-aos-delay="200"><i class="fas fa-check-circle me-2"></i>JWT</li>
+                                    <li data-aos="fade-up" data-aos-delay="300"><i class="fas fa-check-circle me-2"></i>OAuth2</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -496,8 +352,8 @@ class BackendDeveloper {
                         <span>Node.js</span>
                     </div>
                     <div class="tech-icon" data-aos="zoom-in" data-aos-delay="200">
-                        <i class="fab fa-php"></i>
-                        <span>PHP</span>
+                        <i class="fas fa-leaf"></i>
+                        <span>Spring Boot</span>
                     </div>
                     <div class="tech-icon" data-aos="zoom-in" data-aos-delay="250">
                         <i class="fas fa-database"></i>
@@ -516,8 +372,8 @@ class BackendDeveloper {
                         <span>Git</span>
                     </div>
                     <div class="tech-icon" data-aos="zoom-in" data-aos-delay="450">
-                        <i class="fab fa-js"></i>
-                        <span>JavaScript</span>
+                        <i class="fas fa-exchange-alt"></i>
+                        <span>RESTful APIs</span>
                     </div>
                 </div>
             </div>
@@ -681,22 +537,25 @@ class BackendDeveloper {
                     <div class="timeline-dot"></div>
                     <div class="timeline-content" data-aos="fade-right">
                         <div class="timeline-header">
-                            <h3>Học vấn</h3>
-                        </div>
-                        <div class="timeline-body">
-                            <p>Chuyên ngành Công nghệ phần mềm với nền tảng kiến thức vững chắc về lập trình và phát triển phần mềm.</p>
-                            <ul class="timeline-achievements">
-                                <li>Học và thực hành Lập trình Hướng đối tượng (OOP)</li>
-                                <li>Nắm cơ bản kiến thức về phân tích và thiết kế hệ thống</li>
-                                <li>Học về cấu trúc dữ liệu và thuật toán</li>
-                                <li>Tham gia các cuộc thi lập trình của trường:
-                                    <ul>
-                                        <li>Databae Design 2024</li>
-                                        <li>Find IT Talent 2023</li>
-                                        <li>Find IT Talent 2024</li>
-                                    </ul>
-                                </li>
-                            </ul>
+                            <div class="">
+                                <h3>Java Developer với niềm đam mê tạo ra các giải pháp hiệu quả</h3>
+                                <p class="lead">Sinh viên năm cuối ngành Công nghệ thông tin tại HUTECH với nền tảng vững chắc về Java và Spring Boot. Có kinh nghiệm thực tế trong việc phát triển các ứng dụng web với hiệu suất cao và khả năng mở rộng.</p>
+                                <div class="about-info mt-4">
+                                    <!-- ... -->
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="info-item mb-3">
+                                        <h5><i class="fas fa-graduation-cap me-2"></i> Học vấn</h5>
+                                        <p>Sinh viên Công nghệ thông tin - HUTECH</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="info-item mb-3">
+                                        <h5><i class="fas fa-trophy me-2"></i> Thành tích</h5>
+                                        <p>Top 20-30 Database Design 2024<br>Semi-finalist - Find IT Talent 2023, 2024</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

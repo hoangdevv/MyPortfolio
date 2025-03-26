@@ -263,20 +263,18 @@ if (contactForm) {
     });
 }
 
-// Animate skill bars when scrolled into view
-function animateSkillBars() {
-    document.querySelectorAll('.progress').forEach(progress => {
-        progress.style.width = progress.style.width;
-    });
-}
-
-// Kích hoạt animation khi scroll đến phần kỹ năng
+// Hiệu ứng làm sáng dần các mục trong skill-list
 const skillsSection = document.getElementById('ky-nang');
 if (skillsSection) {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                animateSkillBars();
+                const skillItems = skillsSection.querySelectorAll('.skill-list li');
+                skillItems.forEach((item, index) => {
+                    setTimeout(() => {
+                        item.classList.add('fade-in');
+                    }, index * 200); // Mỗi mục xuất hiện cách nhau 200ms
+                });
                 observer.unobserve(entry.target);
             }
         });
